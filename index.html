@@ -1,38 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Order summary card</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 0.6875rem; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-  <script type="module" src="/src/main.js"></script>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    <title>Frontend Mentor | Order summary card</title>
+    <script type="module" src="/src/main.js"></script>
   </head>
-<body>
+  <!-- ADR-0006 : 3 rangées, la carte au centre de la fenêtre, le pied de page en bas -->
+  <body class="grid min-h-dvh grid-rows-[1fr_auto_1fr] font-sans">
+    <main class="row-start-2">
+      <article class="mx-auto w-[calc(100%_-_3rem)] overflow-clip rounded-card bg-white shadow-card sm:w-[28.125rem]">
+        <img class="block h-auto w-full" src="./images/illustration-hero.svg" alt="" width="450" height="220">
 
-  Order Summary
+        <div class="px-6 pt-8 pb-6 text-center sm:px-12 sm:pt-12 sm:pb-10">
+          <h1 class="text-title-mobile font-black text-blue-950 sm:text-title">Order Summary</h1>
+          <p class="mt-4 px-4 text-body-mobile font-medium text-gray-aa sm:mt-5 sm:text-body">You can now listen to millions of songs, audiobooks, and podcasts on any device anywhere you like!</p>
 
-  You can now listen to millions of songs, audiobooks, and podcasts on any 
-  device anywhere you like!
+          <!-- Q-B1 : Change se rapporte au forfait nommé (A3) -->
+          <div class="mt-6 flex items-center gap-5 h-20.5 rounded-box bg-blue-50 ps-4 pe-4.5 text-start sm:mt-5.25 sm:h-24.5 sm:ps-6 sm:pe-6.25" role="group" aria-labelledby="plan-name">
+            <img class="size-12 shrink-0" src="./images/icon-music.svg" alt="" width="48" height="48">
+            <div class="text-plan-mobile sm:text-plan">
+              <p id="plan-name" class="font-black text-blue-950">Annual Plan</p>
+              <p class="font-medium text-gray-aa">$59.99/year</p>
+            </div>
+            <button class="focus-ring ms-auto text-change-mobile font-bold text-blue-700 underline transition-colors duration-200 hover:text-blue-hover hover:no-underline motion-reduce:transition-none sm:text-change" type="button">Change</button>
+          </div>
 
-  Annual Plan
-  $59.99/year
+          <button class="focus-ring mt-6.25 w-full rounded-box bg-blue-700 py-3.5 text-button font-black text-white shadow-button transition-colors duration-200 hover:bg-blue-hover motion-reduce:transition-none sm:mt-8.5 sm:pt-3 sm:pb-4" type="button">Proceed to Payment</button>
+          <button class="focus-ring mt-4.25 w-full py-1.5 text-button leading-6 font-black text-gray-aa transition-colors duration-200 hover:text-blue-950 motion-reduce:transition-none sm:mt-6" type="button">Cancel Order</button>
+        </div>
+      </article>
+    </main>
 
-  Change
-
-  Proceed to Payment
-  Cancel Order
-  
-  <footer class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </footer>
-</body>
+    <footer class="row-start-3 self-end py-4 text-center text-attribution text-blue-950">
+      Challenge by <a class="link focus-ring" href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
+      Coded by <a class="link focus-ring" href="https://www.frontendmentor.io/profile/ounokoya">Koya Esdras</a>.
+    </footer>
+  </body>
 </html>

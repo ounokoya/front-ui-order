@@ -1,1 +1,77 @@
 @import "tailwindcss";
+/* ADR-0004 : Red Hat Display servie avec le site */
+@import "@fontsource/red-hat-display/500.css";
+@import "@fontsource/red-hat-display/700.css";
+@import "@fontsource/red-hat-display/900.css";
+
+/* ADR-0003 : tokens de la bibliothèque Penpot (specs/visuel/penpot/maquette.md) */
+@theme {
+  --color-*: initial;
+  --color-white: hsl(0, 0%, 100%);
+  --color-blue-50: hsl(225, 100%, 98%);
+  --color-blue-100: hsl(225, 100%, 94%);
+  --color-blue-700: hsl(245, 75%, 52%);
+  --color-blue-950: hsl(223, 47%, 23%);
+  --color-gray-600: hsl(224, 23%, 55%);
+  --color-gray-aa: hsl(224, 23%, 46%); /* Q-A1 : Gray 600 assombri, 5,44:1 sur blanc */
+  --color-blue-hover: hsl(245, 75%, 62%); /* Q-A2 : survols AA */
+  --color-link: hsl(228, 45%, 44%); /* Q-B4 : liens de l'attribution (starter) */
+
+  --breakpoint-sm: 30rem; /* Q-B3 : carte de 450 px dès 480 px */
+
+  --font-sans: "Red Hat Display", sans-serif;
+  --text-title: 1.75rem;
+  --text-title--line-height: 1.875rem;
+  --text-title-mobile: 1.375rem;
+  --text-title-mobile--line-height: 1.75rem;
+  --text-body: 1rem;
+  --text-body--line-height: 1.625rem;
+  --text-body-mobile: 0.9375rem;
+  --text-body-mobile--line-height: 1.5625rem;
+  --text-plan: 1rem;
+  --text-plan--line-height: 1.6875rem;
+  --text-plan-mobile: 0.9375rem;
+  --text-plan-mobile--line-height: 1.3125rem;
+  --text-change: 0.875rem;
+  --text-change--line-height: 1.5;
+  --text-change-mobile: 0.8125rem;
+  --text-change-mobile--line-height: 1.5;
+  --text-button: 0.9375rem;
+  --text-button--line-height: 1.25rem;
+  --text-attribution: 0.6875rem;
+  --text-attribution--line-height: 1.5;
+
+  --radius-card: 1.25rem;
+  --radius-box: 0.625rem;
+  --shadow-card: 0 1.5625rem 3.125rem hsl(223 47% 23% / 20%);
+  --shadow-button: 0 0.875rem 1.25rem hsl(245 75% 52% / 35%);
+}
+
+/* contour de focus de 2 px Blue 950 décalé de 2 px (spec §5) */
+@utility focus-ring {
+  &:focus-visible {
+    outline: 0.125rem solid var(--color-blue-950);
+    outline-offset: 0.125rem;
+  }
+}
+
+/* Q-B4 : liens de l'attribution, soulignés sauf au survol */
+@utility link {
+  color: var(--color-link);
+  text-decoration-line: underline;
+  &:hover {
+    text-decoration-line: none;
+  }
+}
+
+@layer base {
+  /* ADR-0005 : fond Blue 100, motif en vague en haut, à pleine largeur */
+  body {
+    background: url("../images/pattern-background-mobile.svg") top / 100% auto no-repeat var(--color-blue-100);
+    /* largeurs de lettres non arrondies au pixel : les lignes se coupent comme sur l'image FM */
+    text-rendering: geometricPrecision;
+    @variant sm {
+      background-image: url("../images/pattern-background-desktop.svg");
+    }
+  }
+}
