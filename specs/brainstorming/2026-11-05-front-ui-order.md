@@ -37,3 +37,13 @@ Koya : « Je valide (G2) » pour le lot 2. Toutes les propositions sont retenues
 | Q-B3 | Pas de maquette tablette | Carte de 450 px centrée dès 480 px ; en dessous, la carte mobile à 24 px des bords |
 | Q-B4 | Attribution | Comme au lot 1 |
 | Q-B5 | Refonte | Même dépôt en v2.0.0, GitHub Pages, « Edit solution » |
+
+## Maquette validée (G3, 2026-11-05)
+
+Koya : « Je valide (G3) » pour le lot 2. Maquette : `specs/visuel/penpot/maquette.md`. Toutes les propositions sont retenues.
+
+| # | Point | Décision |
+|---|---|---|
+| G3-1 | Tablette (Q-B3) | La carte desktop de 450 px centrée |
+| G3-2 | Seuils visuels | Desktop et états 5 % ; mobile 6,3 % (illustration FM décalée de 6 px) |
+| G3-3 | Illustration mobile | À pleine largeur de la carte, comme le fera le site |

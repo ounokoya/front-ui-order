@@ -1,6 +1,6 @@
 # Maquette Penpot — Order summary component (refonte v2.0.0)
 
-> SDL-FM 1.5.0 Phase 3 (remise à niveau, étape B, lot 2). Fichier Penpot : « FM Newbie » (créé par Koya ; nom vérifié avant chaque écriture), page « Order summary ». **En attente de validation (G3).**
+> SDL-FM 1.5.0 Phase 3 (remise à niveau, étape B, lot 2). Fichier Penpot : « FM Newbie » (créé par Koya ; nom vérifié avant chaque écriture), page « Order summary ». **Validée (G3, 2026-11-05)** avec les propositions : carte de 450 px en tablette (Q-B3), seuils 5 % (desktop, états) et 6,3 % (mobile), illustration à pleine largeur en mobile.
 > Décisions G2 appliquées : gris AA (Q-A1), survols AA (Q-A2), trois boutons sans destination (Q-B1), illustration et icône décoratives (Q-B2), tablette (Q-B3), attribution (Q-B4).
 
 ## Rendu des exports
