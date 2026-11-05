@@ -22,4 +22,18 @@ Plan validé (G1, 2026-11-05) au niveau du programme : `frontmentor/specs/plan-r
 
 ## Analyse (Phase 2)
 
-`specs/visuel/front-ui-order-analyse.png` (et `.excalidraw`), en attente de G2.
+`specs/visuel/front-ui-order-analyse.png` (et `.excalidraw`).
+
+## Analyse validée (G2, 2026-11-05)
+
+Koya : « Je valide (G2) » pour le lot 2. Toutes les propositions sont retenues.
+
+| # | Point | Décision |
+|---|---|---|
+| Q-A1 | Gray 600 sous 4,5:1 | hsl(224, 23%, 46%) : 5,44:1 sur blanc, 5,09:1 sur Blue 50 (paragraphe, prix, Cancel Order) |
+| Q-A2 | Survols de FM sous 4,5:1 | hsl(245, 75%, 62%) pour le bouton (blanc dessus 5,29:1) et Change (4,94:1 sur Blue 50) |
+| Q-B1 | Change, Proceed to Payment, Cancel Order sans destination | button type="button" sans action ; Change garde l'aspect d'un lien |
+| Q-B2 | Illustration et icône | Décoratives, alt="" |
+| Q-B3 | Pas de maquette tablette | Carte de 450 px centrée dès 480 px ; en dessous, la carte mobile à 24 px des bords |
+| Q-B4 | Attribution | Comme au lot 1 |
+| Q-B5 | Refonte | Même dépôt en v2.0.0, GitHub Pages, « Edit solution » |
