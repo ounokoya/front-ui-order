@@ -45,6 +45,10 @@ Contrôle rouge fait avant le code (Phase 4) : 27 échecs pour la bonne raison s
 
 Constats de la construction (Phase 6) : l'encadré du forfait mesurait 104 px en desktop (deux lignes de 27 px plus hautes que l'icône) ; sa hauteur est fixée à 98 px (82 px en mobile), le texte centré.
 
-## 4. Verdict
+## 4. En ligne (Phase 12)
 
-Conforme à la spec et à la maquette validée (G3). Prêt pour la Phase 9 (README).
+`BASE_URL=https://ounokoya.github.io/front-ui-order/ npx playwright test --workers=2` : **35 réussis sur 35**, écarts visuels identiques au local (0,93 %, 0,94 % et 4,20 %), sur la v2.0.0 déployée depuis la branche `gh-pages` (publication avec l'accord de Koya, 2026-11-05). GitHub a activé Pages de lui-même à la première publication de la branche `gh-pages`.
+
+## 5. Verdict
+
+Conforme à la spec et à la maquette validée (G3). README fait (Phase 9) ; v2.0.0 en ligne. Prêt pour « Edit solution » sur FM (Phase 13).
