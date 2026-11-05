@@ -81,3 +81,14 @@ test('S16 — prefers-reduced-motion : aucune transition sur les 3 boutons', asy
     expect(none, name).toBe(true)
   }
 })
+
+// Phase 8, écart E1 : le contour de focus arrivait en fondu depuis la couleur du texte
+// (la transition des couleurs des boutons portait aussi sur outline-color)
+test('E1 — Tab : le contour est Blue 950 dès l\'arrivée du focus, sans fondu', async ({ page }) => {
+  const blue = await cssColor(page, 'hsl(223, 47%, 23%)')
+  for (let i = 0; i < 3; i++) {
+    await page.keyboard.press('Tab')
+    const { name, color } = await page.evaluate(() => ({ name: document.activeElement.textContent.trim(), color: getComputedStyle(document.activeElement).outlineColor }))
+    expect.soft(color, name).toBe(blue)
+  }
+})
